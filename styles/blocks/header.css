@@ -1,0 +1,21 @@
+.header {
+  background-image: url("../../assets/photos/headerPhoto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  position: relative;
+}
+
+.header__social-links {
+  position: absolute;
+  top: 50%;
+  left: -6%;
+}
+
+.header__section {
+  height: 100%;
+}
+
+.header__section__container {
+  padding-top: var(--padding-header-section-container);
+}

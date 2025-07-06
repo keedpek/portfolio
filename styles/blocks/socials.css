@@ -1,0 +1,38 @@
+.socials {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: fit-content;
+}
+.socials--rotated {
+  rotate: -90deg;
+}
+.socials__title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: var(--font-size-s);
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.socials__divider {
+  width: 70px;
+  height: 0px;
+  border: 1px solid #000;
+}
+.socials__list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+.socials__item {
+}
+.socials__link {
+}
+.socials__icon {
+}
+.socials__icon--small {
+  width: 20px;
+  height: 20px;
+}
