@@ -1,5 +1,7 @@
 @import "./utilities/variables.css";
 @import "./utilities/reset.css";
+@import "./utilities/global.css";
+
 @import "./blocks/socials.css";
 @import "./blocks/contact-me.css";
 @import "./blocks/section.css";
