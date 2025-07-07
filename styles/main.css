@@ -1,10 +1,10 @@
 @import "./utilities/variables.css";
 @import "./utilities/reset.css";
+@import "./blocks/socials.css";
+@import "./blocks/contact-me.css";
 @import "./blocks/section.css";
 @import "./blocks/header.css";
-@import "./blocks/socials.css";
 @import "./blocks/burger.css";
 @import "./blocks/buttons.css";
 @import "./blocks/experience.css";
-@import "./blocks/contact-me.css";
 @import "./blocks/form.css";

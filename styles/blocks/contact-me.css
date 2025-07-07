@@ -8,6 +8,7 @@
 .contact-me__side-photo {
   width: 40%;
   aspect-ratio: 4/6;
+  object-fit: cover;
 }
 
 .contact-me__main {
@@ -25,4 +26,40 @@
 .contact-me__socials {
   margin-top: var(--margin-s);
   gap: 25px;
+}
+
+@media (max-width: 1024px) {
+  .contact-me {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-me__side-photo {
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: var(--margin-s);
+  }
+
+  .contact-me__main {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .contact-me__side-photo {
+    display: none;
+  }
+
+  .contact-me__p {
+    margin-top: var(--margin-s);
+    font-weight: 700;
+    font-size: var(--font-size-xs);
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .contact-me {
+    padding: 0px var(--padding-xxs);
+  }
+}
+@media (max-width: 480px) {
 }

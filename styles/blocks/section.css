@@ -97,3 +97,34 @@
 .section__header--align-center .section__title::before {
   left: calc(50% - 16px);
 }
+
+@media (max-width: 768px) {
+  .section__subtitle,
+  .section__subtitle--bigger {
+    font-size: var(--font-size-l);
+    line-height: 100%;
+  }
+
+  .section__subtitle {
+    margin-top: var(--margin-m);
+  }
+
+  .section__subtitle--bigger {
+    margin-top: var(--margin-xs);
+  }
+
+  .section__subtitle--close-underline::after {
+    bottom: calc(0px - var(--margin-xs));
+  }
+}
+
+@media (max-width: 480px) {
+  .section__container {
+    border: none;
+    padding-top: var(--padding-s);
+  }
+
+  .section {
+    padding: 0px var(--padding-xxs);
+  }
+}
