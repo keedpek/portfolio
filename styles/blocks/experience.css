@@ -1,0 +1,128 @@
+.experience__container {
+  display: flex;
+  margin-top: var(--margin-xxl);
+  padding: 0 var(--padding-l) 0 var(--padding-xl);
+  justify-content: space-between;
+}
+
+.experience__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  position: relative;
+}
+
+.experience__column::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -42px;
+  height: 90%;
+  border: 1px solid #000;
+}
+
+.experience__column::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 5px;
+  left: -49px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.experience__title {
+  font-weight: 700;
+  font-size: var(--font-size-m);
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.experience-item {
+  margin-top: var(--margin-xl);
+  position: relative;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -42px;
+  width: 42px;
+  border: 1px solid #000;
+}
+
+.experience-item__header {
+  display: flex;
+  position: relative;
+}
+
+.experience-item__icon {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  left: 15px;
+}
+
+.experience-item__header::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -5px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.experience-item__info {
+  margin-left: 50px;
+}
+
+.experience-item__title {
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.experience-item__subtitle {
+  font-weight: 500;
+  font-size: var(--font-size-xxs);
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.experience-item__description {
+  margin-top: var(--margin-xs);
+  font-weight: 500;
+  font-size: var(--font-size-xxs);
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@media (max-width: 1024px) {
+  .experience__container {
+    margin-top: var(--margin-xl);
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 0px var(--padding-xxs);
+  }
+
+  .experience__column {
+    max-width: 70%;
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
+  .experience__container {
+    align-items: flex-end;
+  }
+
+  .experience__column {
+    max-width: 90%;
+  }
+}

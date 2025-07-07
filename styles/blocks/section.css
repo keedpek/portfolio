@@ -1,0 +1,130 @@
+.section {
+  padding: 0px var(--padding-section);
+}
+
+.section__container {
+  height: 100%;
+  padding-top: var(--padding-section-container);
+  box-sizing: border-box;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.section__container--border-top {
+  border-top: 1px solid #000;
+}
+
+.section__container--border-bottom {
+  border-bottom: 1px solid #000;
+  padding-bottom: var(--padding-l);
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__header--align-left {
+  align-items: flex-start;
+}
+
+.section__header--align-center {
+  align-items: center;
+}
+
+.section__title {
+  position: relative;
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.section__title span {
+  position: relative;
+  z-index: 10;
+}
+
+.section__title::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: calc(50% - 18px);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.section__subtitle {
+  position: relative;
+  max-width: 500px;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0%;
+  margin-top: var(--margin-xxs);
+}
+
+.section__subtitle--with-underline::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  border: 1px solid var(--primary-color);
+}
+
+.section__subtitle--close-underline::after {
+  bottom: 0px;
+}
+
+.section__subtitle--far-underline::after {
+  bottom: calc(0px - var(--margin-m));
+}
+
+.section__subtitle--bigger {
+  font-size: var(--font-size-xxl);
+}
+
+.section__header--align-left .section__subtitle--with-underline::after {
+  left: 0;
+}
+.section__header--align-left .section__title span {
+  margin-left: var(--margin-xs);
+}
+
+.section__header--align-center .section__subtitle--with-underline::after {
+  left: calc(50% - 30px);
+}
+.section__header--align-center .section__title::before {
+  left: calc(50% - 16px);
+}
+
+@media (max-width: 768px) {
+  .section__subtitle,
+  .section__subtitle--bigger {
+    font-size: var(--font-size-l);
+    line-height: 100%;
+  }
+
+  .section__subtitle {
+    margin-top: var(--margin-m);
+  }
+
+  .section__subtitle--bigger {
+    margin-top: var(--margin-xs);
+  }
+
+  .section__subtitle--close-underline::after {
+    bottom: calc(0px - var(--margin-xs));
+  }
+}
+
+@media (max-width: 480px) {
+  .section__container {
+    border: none;
+    padding-top: var(--padding-s);
+  }
+
+  .section {
+    padding: 0px var(--padding-xxs);
+  }
+}
