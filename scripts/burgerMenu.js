@@ -1,7 +1,7 @@
 const burgerMenuBtn = document.getElementById('burgerBtn')
 const burgerMenuCloseBtn = document.getElementById('burgerCloseBtn')
 const burgerOverlay = document.getElementById('burgerOverlay')
-const burgerMenuItems = document.querySelectorAll('#burgerMenuItem')
+const burgerMenuItems = document.querySelectorAll('.menu__item')
 
 const openMenu = (e) => {
   burgerOverlay.classList.remove('burger--not-visible')
