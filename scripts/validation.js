@@ -21,9 +21,8 @@ const nameValidation = () => {
     return false
   }
 
-  console.log(1)
   removeError(nameInput, nameError)
-  return true
+  return nameInput.value
 }
 
 const emailValidation = () => {
@@ -39,9 +38,8 @@ const emailValidation = () => {
     return false
   }
 
-  console.log(2)
   removeError(emailInput, emailError)
-  return true
+  return emailInput.value
 }
 
 const messageValidation = () => {
@@ -49,9 +47,9 @@ const messageValidation = () => {
     setError(messageInput, messageError, 'Сообщение должно содержать минимум 20 символов');
     return false;
   }
-  console.log(3)
+
   removeError(messageInput, messageError)
-  return true
+  return messageInput.value
 }
 
 const setError = (input, error, message) => {
@@ -89,9 +87,21 @@ form.addEventListener('submit', function(e) {
   e.preventDefault()
   removeAllErrors()
 
-  if (nameValidation() && emailValidation() && messageValidation()) {
-    //fetch
-    alert('cool')
-    this.reset()
+  const fetchData = {
+    name: nameValidation(),
+    email: emailValidation(),
+    message: messageValidation()
+  }
+
+  if (fetchData.name && fetchData.email && fetchData.message) {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify(fetchData)
+    })
+    .then(() => {
+      alert('fetched')
+      this.reset()  
+    })
+    .catch((err) => {alert(err)})
   }
 })
