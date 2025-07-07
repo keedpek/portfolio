@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/main.css" rel="stylesheet" />
+    <script src="scripts/burgerMenu.js" defer></script>
+    <script src="scripts/validation.js" defer></script>
     <title>Александра Смит</title>
   </head>
   <body>
@@ -13,36 +15,92 @@
           <span class="socials__title">Социальные сети</span>
           <div class="socials__divider"></div>
           <ul class="socials__list">
-            <li class="socials__item">
-              <a href="https://github.com" class="socials__link">
+            <li>
+              <a href="https://github.com">
                 <img
-                  class="socials__icon socials__icon--small"
+                  class="socials__icon--small"
                   src="./assets/icons/Github.svg"
+                  alt="github"
                 />
               </a>
             </li>
-            <li class="socials__item">
-              <a href="https://www.instagram.com" class="socials__link">
+            <li>
+              <a href="https://www.instagram.com">
                 <img
-                  class="socials__icon socials__icon--small"
+                  class="socials__icon--small"
                   src="./assets/icons/Instagram.svg"
+                  alt="instagram"
                 />
               </a>
             </li>
-            <li class="socials__item">
-              <a href="https://ru-ru.facebook.com" class="socials__link">
+            <li>
+              <a href="https://ru-ru.facebook.com">
                 <img
-                  class="socials__icon socials__icon--small"
+                  class="socials__icon--small"
                   src="./assets/icons/Facebook.svg"
+                  alt="facebook"
                 />
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="burger-menu"></div>
+        <button id="burgerBtn" class="burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <div id="burgerOverlay" class="burger__overlay burger--not-visible">
+          <div class="burger__container">
+            <button id="burgerCloseBtn" class="burger__close-btn">
+              &times;
+            </button>
+            <nav class="menu">
+              <ul>
+                <li id="burgerMenuItem" class="menu__item">
+                  <a href="#about" class="menu__link">ПРО МЕНЯ</a>
+                </li>
+                <li id="burgerMenuItem" class="menu__item">
+                  <a href="#experience" class="menu__link">МОЙ ОПЫТ</a>
+                </li>
+                <li id="burgerMenuItem" class="menu__item">
+                  <a href="#contacts" class="menu__link">КОНТАКТЫ</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="socials__list burger__socials">
+              <li>
+                <a href="https://github.com">
+                  <img
+                    class="socials__icon--small"
+                    src="./assets/icons/Github.svg"
+                    alt="github"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com">
+                  <img
+                    class="socials__icon--small"
+                    src="./assets/icons/Instagram.svg"
+                    alt="instagram"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://ru-ru.facebook.com">
+                  <img
+                    class="socials__icon--small"
+                    src="./assets/icons/Facebook.svg"
+                    alt="facebook"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <section class="section header__section">
+        <section id="about" class="section header__section">
           <div
             class="section__container header__section__container section__container--border-top"
           >
@@ -55,26 +113,20 @@
               </p>
             </div>
             <nav class="button-container">
-              <button
-                class="button-container__button button-container__button--filled"
-              >
-                Портфолио
-              </button>
-              <button
-                class="button-container__button button-container__button--transparent"
-              >
-                Про меня
-              </button>
+              <button class="button button--filled">Портфолио</button>
+              <button class="button button--transparent">Про меня</button>
             </nav>
           </div>
         </section>
       </header>
 
-      <section class="section">
+      <section id="experience" class="section">
         <div class="section__container">
           <div class="section__header section__header--align-center">
             <h2 class="section__title"><span>Опыт</span></h2>
-            <p class="section__subtitle section__subtitle--with-underline">
+            <p
+              class="section__subtitle section__subtitle--with-underline section__subtitle--far-underline"
+            >
               Чем я буду полезна
             </p>
           </div>
@@ -88,6 +140,7 @@
                   <img
                     class="experience-item__icon"
                     src="/assets/icons/university.svg"
+                    alt="university"
                   />
                   <div class="experience-item__info">
                     <h4 class="experience-item__title">
@@ -111,6 +164,7 @@
                   <img
                     class="experience-item__icon"
                     src="assets/icons/courses.svg"
+                    alt="courses"
                   />
                   <div class="experience-item__info">
                     <h4 class="experience-item__title">Udemy</h4>
@@ -136,6 +190,7 @@
                   <img
                     class="experience-item__icon"
                     src="assets/icons/developer.svg"
+                    alt="developer"
                   />
                   <div class="experience-item__info">
                     <h4 class="experience-item__title">Front-End Developer</h4>
@@ -157,6 +212,7 @@
                   <img
                     class="experience-item__icon"
                     src="assets/icons/designer.svg"
+                    alt="designer"
                   />
                   <div class="experience-item__info">
                     <h4 class="experience-item__title">UI/UX Designer</h4>
@@ -173,6 +229,94 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section">
+        <div
+          class="section__container section__container--border-bottom contact-me"
+        >
+          <img
+            class="contact-me__side-photo"
+            src="/assets/photos/contactMePhoto.jpg"
+            loading="lazy"
+            alt="Александра Смит"
+          />
+          <div class="contact-me__main">
+            <div class="section__header section__header--align-left">
+              <h2 class="section__title"><span>Контакты</span></h2>
+              <p
+                class="section__subtitle section__subtitle--with-underline section__subtitle--close-underline"
+              >
+                Свяжитесь со мной
+              </p>
+            </div>
+            <p class="contact-me__p">Любым удобным для вас способом:</p>
+            <ul class="socials__list contact-me__socials">
+              <li>
+                <a href="https://ru-ru.facebook.com">
+                  <img src="./assets/icons/Facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com">
+                  <img src="./assets/icons/Telegram.svg" alt="github" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com">
+                  <img src="./assets/icons/Instagram.svg" alt="instagram" />
+                </a>
+              </li>
+            </ul>
+            <p class="contact-me__p">
+              Или оставьте ваши данные и я сама вам напишу:
+            </p>
+            <form id="form" class="form">
+              <div class="form__row">
+                <div class="form__field">
+                  <label class="form__label" for="name">Ваше имя</label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    id="name"
+                    maxlength="20"
+                    required
+                  />
+                  <span id="nameError" class="form__error"></span>
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="email">Ваша почта</label>
+                  <input
+                    class="form__input"
+                    type="email"
+                    id="email"
+                    maxlength="30"
+                    required
+                  />
+                  <span id="emailError" class="form__error"></span>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="message">Ваше сообщение</label>
+                <textarea
+                  class="form__textarea"
+                  id="message"
+                  maxlength="255"
+                  required
+                ></textarea>
+                <span id="messageError" class="form__error"></span>
+              </div>
+
+              <div class="button-container">
+                <button class="button button--filled">
+                  Отправить сообщение
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
