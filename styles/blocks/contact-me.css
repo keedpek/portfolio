@@ -1,0 +1,28 @@
+.contact-me {
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(--padding-m);
+  padding-right: var(--padding-s);
+}
+
+.contact-me__side-photo {
+  width: 40%;
+  aspect-ratio: 4/6;
+}
+
+.contact-me__main {
+  width: 55%;
+}
+
+.contact-me__p {
+  margin-top: var(--margin-s);
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.contact-me__socials {
+  margin-top: var(--margin-s);
+  gap: 25px;
+}

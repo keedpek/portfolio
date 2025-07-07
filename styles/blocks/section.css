@@ -16,6 +16,7 @@
 
 .section__container--border-bottom {
   border-bottom: 1px solid #000;
+  padding-bottom: var(--padding-l);
 }
 
 .section__header {
@@ -68,8 +69,15 @@
   content: "";
   position: absolute;
   width: 60px;
-  bottom: calc(0px - var(--margin-m));
   border: 1px solid var(--primary-color);
+}
+
+.section__subtitle--close-underline::after {
+  bottom: 0px;
+}
+
+.section__subtitle--far-underline::after {
+  bottom: calc(0px - var(--margin-m));
 }
 
 .section__subtitle--bigger {
